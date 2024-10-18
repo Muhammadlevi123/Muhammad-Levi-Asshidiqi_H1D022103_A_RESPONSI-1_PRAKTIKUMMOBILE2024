@@ -42,11 +42,8 @@ class WisataBloc {
       "location": wisata.location,
       "attraction": wisata.attraction
     };
-    // print("Body : $body");
     var response = await Api().put(apiUrl, jsonEncode(body));
 
-    // print("Status Code: ${response.statusCode}");
-    // print("Response Body: ${response.body}");
     
     var jsonObj = json.decode(response.body);
     return jsonObj['status'];
